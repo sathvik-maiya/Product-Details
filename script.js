@@ -47,12 +47,6 @@ let selectedProduct = {
   title: "Embrace Sideboard",
 };
 
-//function to reset
-function resetAllInfo() {
-  let listOfcolors = document.getElementsByClassName("material-icons");
-  console.log(listOfcolors);
-}
-
 //function to choose color
 function SelectColor(color) {
   let listOfColors = document.getElementsByClassName("material-icons");
@@ -96,7 +90,6 @@ function SelectSize(size) {
 
 //function to add to cart
 function AddToCart() {
-  console.log(selectedProduct);
   const messageEle = document.getElementsByClassName("Message-of-buy")[0];
   selectedProduct = {
     ...selectedProduct,
@@ -104,7 +97,7 @@ function AddToCart() {
     title: productInfo.title,
     productType: productInfo.product_type,
   };
-  console.log(selectedProduct);
+
   messageEle.textContent = `${selectedProduct.title}
      with color ${selectedProduct.color}
      and size ${selectedProduct.size}
